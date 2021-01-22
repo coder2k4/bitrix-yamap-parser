@@ -1,0 +1,83 @@
+<?
+require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php'); ?>
+
+
+<!--FEEDBACK-->
+<?
+
+global $company_id;
+$company_id = ['=PROPERTY_COMPANY_ID' => 130263912071];
+
+$APPLICATION->IncludeComponent(
+	"bitrix:news.list", 
+	"feedback_slider", 
+	array(
+		"ACTIVE_DATE_FORMAT" => "d-m-Y",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "N",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "N",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "N",
+		"COMPONENT_TEMPLATE" => "feedback_slider",
+		"DETAIL_URL" => "",
+		"DISPLAY_BOTTOM_PAGER" => "N",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"FIELD_CODE" => array(
+			0 => "DATE_ACTIVE_FROM",
+			1 => "ACTIVE_FROM",
+			2 => "",
+		),
+		"FILTER_NAME" => "company_id",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => "23",
+		"IBLOCK_TYPE" => "dir",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"INCLUDE_SUBSECTIONS" => "N",
+		"MESSAGE_404" => "",
+		"NEWS_COUNT" => "8",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => "",
+		"PAGER_TITLE" => "Новости",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"PROPERTY_CODE" => array(
+			0 => "COMPANY_ID",
+			1 => "FEEDBACK_RATING",
+			2 => "",
+		),
+		"SET_BROWSER_TITLE" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_META_KEYWORDS" => "N",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "N",
+		"SHOW_404" => "N",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "",
+		"STRICT_SECTION_CHECK" => "N",
+		"TITLE_BLOCK" => "Акции"
+	),
+	false
+); ?>
+
+
+<?php
+require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php');
+?>
